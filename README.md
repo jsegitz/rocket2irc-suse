@@ -4,19 +4,31 @@ Bitlbee container to connect easily to chat.suse.de using a IRC client
 
 # How to build and start
 
+## Docker
+
 Clone repository, change to directory and invoke 
 
     docker build -t rocket2irc .
 
 Start the container
 
-    docker run -p 16667:6667 -d --cap-drop ALL --security-opt=no-new-privileges rocket2irc:latest
+    docker run -p 6667:6667 -d --cap-drop ALL --security-opt=no-new-privileges rocket2irc:latest
+
+## Podman
+
+Clone repository, change to directory and invoke 
+
+    podman build -t rocket2irc .
+
+Start the container
+
+    podman run --network='host' -d --cap-drop ALL --security-opt=no-new-privileges rocket2irc:latest
 
 # How to use it
 
 Start the container, then connect in your IRC client to 127.0.0.1:16667
 
-    /connect 127.0.0.1 16667
+    /connect 127.0.0.1 6667
 
 In the bitlbee channel:
 
