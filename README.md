@@ -31,6 +31,9 @@ In the bitlbee channel:
 
 * Sometimes I don't see what I write in the webinterface in the IRC client
 * You need to add @ before the nick to highlight someone in rocket. With that tab completion doesn't work for me in irssi
+* I see disconnects from time to time. bitlbee reconnects, but it kicks you from the channel. For irssi you can use autorejoin.pl
+    /SET autorejoin_channels #rsecruity
+    /SET autorejoin_delay 60
 
 # Credit
 
